@@ -1,9 +1,9 @@
-import { SidebarAdmin } from "@/components/fragments/Sidebar";
+import { SidebarDashboard } from "@/components/fragments/Sidebar";
 
 const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  return <SidebarAdmin>{children}</SidebarAdmin>;
+  return <SidebarDashboard>{children}</SidebarDashboard>;
 };
 
 export default DashboardLayout;

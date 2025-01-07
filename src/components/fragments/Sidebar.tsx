@@ -18,7 +18,7 @@ interface LinkItem {
   icon: React.ReactNode;
 }
 
-export function SidebarAdmin({ children }: { children: React.ReactNode }) {
+export function SidebarDashboard({ children }: { children: React.ReactNode }) {
   const links: LinkItem[] = [
     {
       label: "Dashboard",
@@ -103,8 +103,8 @@ export function SidebarAdmin({ children }: { children: React.ReactNode }) {
           {/* <ThemeToggle /> */}
         </SidebarBody>
       </Sidebar>
-      <main className="flex-1 overflow-auto py-2 sm:py-4 md:py-8">
-        <div className="w-full px-2 sm:px-4 md:px-8">{children}</div>
+      <main className="flex-1 overflow-auto my-auto bg-blue-500">
+        <div className="w-full px-2 sm:px-4 md:px-8 bg-green-500">{children}</div>
       </main>
     </div>
   );
