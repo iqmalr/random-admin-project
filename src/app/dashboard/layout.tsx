@@ -1,4 +1,4 @@
-import { SidebarDashboard } from "@/components/fragments/Sidebar";
+import { SidebarDashboard } from "@/components/fragments/sidebar";
 
 const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
