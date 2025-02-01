@@ -17,9 +17,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 
 export default function OverViewPage() {
+  // push to development
   return (
     <PageContainer scrollable>
-      <div className='space-y-2 bg-teal-400'>
+      <div className='space-y-2 '>
         <div className='flex items-center justify-between space-y-2'>
           <h2 className='text-2xl font-bold tracking-tight'>
             Hi, Welcome back 👋
@@ -37,8 +38,8 @@ export default function OverViewPage() {
             </TabsTrigger>
           </TabsList>
           <TabsContent value='overview' className='space-y-4'>
-            <div className='grid gap-4 grid-cols-4 bg-amber-500'>
-            {/* <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'> */}
+            {/* <div className='grid gap-4 grid-cols-4 '> */}
+            <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
               <Card>
                 <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
                   <CardTitle className='text-sm font-medium'>

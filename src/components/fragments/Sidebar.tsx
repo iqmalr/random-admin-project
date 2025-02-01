@@ -11,6 +11,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 // import ThemeToggle from "./theme-toggle";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
+import { ModeToggle } from "./mode-toggle";
 
 interface LinkItem {
   label: string;
@@ -70,7 +71,8 @@ export function SidebarDashboard({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex h-screen w-screen overflow-hidden dark:bg-neutral-900">
       <Sidebar open={open} setOpen={setOpen}>
-        <SidebarBody className="flex h-full flex-col justify-between border-r-2 border-neutral-200">
+        <SidebarBody className="flex h-full flex-col justify-between border-r-2 border">
+          {/* <SidebarBody className="flex h-full flex-col justify-between border-r-2 border-neutral-200"> */}
           <div className="flex flex-1 flex-col overflow-y-auto">
             {open ? <Logo /> : <LogoIcon />}
             <div className="mt-8 flex flex-col gap-2">
@@ -98,13 +100,15 @@ export function SidebarDashboard({ children }: { children: React.ReactNode }) {
               Hosted on Vercel
               <br />
               Made with Aceternity UI
+              <br />
+              <ModeToggle />
             </div>
           )}
           {/* <ThemeToggle /> */}
         </SidebarBody>
       </Sidebar>
-      <main className="flex-1 overflow-auto my-auto bg-blue-500">
-        <div className="w-full px-2 sm:px-4 md:px-8 bg-green-500">{children}</div>
+      <main className="flex-1 overflow-auto my-auto 0">
+        <div className="w-full px-2 sm:px-4 md:px-8 ">{children}</div>
       </main>
     </div>
   );
